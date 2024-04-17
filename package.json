@@ -1,0 +1,16 @@
+{
+  "name": "home-work-node-cli",
+  "version": "1.0.0",
+  "description": "Node.js module1",
+  "main": "index.js",
+  "author": "Valya Aleksandrova",
+  "mail": "valya.alexandrova.presich@gmail.com",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "devDependencies": {
+    "commander": "^12.0.0",
+    "nodemon": "^2.0.13"
+  }
+}
