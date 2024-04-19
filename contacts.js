@@ -53,14 +53,15 @@ async function addContact(contact) {
   }
 }
 
-async function updateContact(contact) {
+async function updateContact(id, contactData) {
   try {
     const contacts = await listContacts();
-    const index = contacts.findIndex(({ id }) => id === contact.id);
+    const index = contacts.findIndex(contact => contact.id === id);
     if (index !== -1) {
-      contacts[index] = contact;
+      const updatedContact = { id, ...contactData };
+      contacts[index] = updatedContact;
       await writeContacts(contacts);
-      return contact;
+      return updatedContact;
     }
     return null;
   } catch (error) {

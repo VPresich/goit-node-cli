@@ -45,7 +45,7 @@ async function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case 'update':
-      console.log(await updateContact({ id, name, email, phone }));
+      console.log(await updateContact(id, { name, email, phone }));
       break;
 
     default:
