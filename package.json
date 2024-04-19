@@ -12,8 +12,5 @@
   "devDependencies": {
     "commander": "^12.0.0",
     "nodemon": "^2.0.13"
-  },
-  "dependencies": {
-    "uuid": "^9.0.1"
   }
 }
