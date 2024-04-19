@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Node.js module1",
   "main": "index.js",
+  "type": "module",
   "author": "Valya Aleksandrova",
   "mail": "valya.alexandrova.presich@gmail.com",
   "scripts": {

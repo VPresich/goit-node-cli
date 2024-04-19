@@ -1,3 +1,5 @@
+This version for ECMAScript modules
+
 This program is a command-line interface (CLI) tool for managing contacts.
 It allows users to perform various actions on contacts stored in a JSON file.
 The available actions are:
@@ -38,7 +40,10 @@ node index -a list
 npm start -- --action list
 npm start -- -action list
 
-5. For help
+5. Update list (change index value)
+    node index --action update -i 1 -n Mango -e mango@gmail.com -p 666-66-66
+    node index -a update -n Mango -e mango@gmail.com -p 555-55-5 -i 1 
+6. For help
 node index --help
 node index -h
 

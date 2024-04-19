@@ -1,13 +1,17 @@
-const { program } = require('commander');
-const {
+import { program } from 'commander';
+import {
   listContacts,
   getContactById,
   removeContact,
   addContact,
-} = require('./contacts');
+  updateContact,
+} from './contacts.js';
 
 program
-  .option('-a, --action <type>', 'choose action: list | get | remove | add')
+  .option(
+    '-a, --action <type>',
+    'choose action: list | get | remove | add | update'
+  )
   .option('-i, --id <type>', 'contact id')
   .option('-n, --name <type>', 'contact name')
   .option('-e, --email <type>', 'contact email')
@@ -37,7 +41,11 @@ async function invokeAction({ action, id, name, email, phone }) {
       break;
 
     case 'add':
-      console.log(await addContact(name, email, phone));
+      console.log(await addContact({ name, email, phone }));
+      break;
+
+    case 'update':
+      console.log(await updateContact({ id, name, email, phone }));
       break;
 
     default:
